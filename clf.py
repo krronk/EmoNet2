@@ -5,7 +5,7 @@ from PIL import Image
 
 def predict(image_path):
     mnet = torchvision.models.resnet18(pretrained = "False")
-    mnet.load_state_dict(torch.load('mobilenet_59.pth'))
+    mnet.load_state_dict(torch.load('Models/mobilenet_59.pth'))
 
     
     transform = transforms.Compose([
