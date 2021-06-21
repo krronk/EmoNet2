@@ -16,7 +16,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title("Emotion Classification App")
 st.write("")
 
-file_up = st.file_uploader("Upload an image", type="jpg")
+file_up = st.file_uploader('Image of cat/dog to be uploaded.", type=['png','jpeg','jpg']')
 
 if file_up is not None:
     image = Image.open(file_up)
