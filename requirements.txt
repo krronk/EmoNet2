@@ -1,4 +1,4 @@
-streamlit
-torch
-torchvision
-Pillow
+streamlit == 0.82.0
+torch == 1.8.1+cpu
+torchvision == 0.9.1+cpu
+Pillow == 8.2.0
