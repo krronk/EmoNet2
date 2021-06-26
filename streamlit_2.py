@@ -51,7 +51,7 @@ def predict(image):
     top5_prob, top5_catid = torch.topk(probabilities*100, 5)
     for i in range(top5_prob.size(0)):
         
-        print(classes[top5_catid[i]], top5_prob[i].item())
+        return (classes[top5_catid[i]], top5_prob[i].item())
 
 
 if file_up is not None:
@@ -64,5 +64,5 @@ if file_up is not None:
     st.write(labels)
 
     # print out the top 5 prediction labels with scores
-    #for i in labels:
-     #   st.write("Prediction (index, name)", i[0], ",   Score: ", i[1])
+    for i in labels:
+        st.write("Prediction (index, name)", i[0], ",   Score: ", i[1])
