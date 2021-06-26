@@ -42,6 +42,7 @@ def predict(image):
     img = Image.open(image)
     batch_t = torch.unsqueeze(transform(img), 0)
     out = mnet(batch_t)
+    probabilities = torch.nn.functional.softmax(out[0], dim=0)
 
     with open('emonet_classes.txt') as f:
         classes = [line.strip() for line in f.readlines()]
