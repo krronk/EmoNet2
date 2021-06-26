@@ -24,7 +24,7 @@ def predict(image):
     """
     # create a ResNet model
     device = torch.device('cpu')
-    mnet = torch.load('/content/mnot_1_68.pth' , map_location= device)
+    mnet = torch.load('mnot_1_68.pth' , map_location= device)
     mnet.eval()
 
 
