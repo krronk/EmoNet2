@@ -61,6 +61,7 @@ if file_up is not None:
     st.write("")
     st.write("Just a second ...")
     labels = predict(file_up)
+    st.write(labels)
 
     # print out the top 5 prediction labels with scores
     #for i in labels:
