@@ -10,7 +10,7 @@ st.title("Emotion Classification App")
 st.write(" Emotion recognition according to seven basic emotions")
 
 # enable users to upload images for the model to make predictions
-file_up = st.file_uploader("Upload an image", type = "jpg")
+file_up = st.file_uploader("Upload an image", type = ["jpg" , "jpeg" , "png"])
 
 
 def predict(image):
