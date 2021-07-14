@@ -4,7 +4,7 @@ from clf import predict
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
-st.title("Dehao's Simple Image Classification App")
+st.title("Emotion Detection App")
 st.write("")
 
 file_up = st.file_uploader("Upload an image", type="jpg")
@@ -13,7 +13,7 @@ if file_up is not None:
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
-    st.write("Just a second...")
+    st.write("Top Predictions")
     labels = predict(file_up)
 
     # print out the top 5 prediction labels with scores
