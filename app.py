@@ -5,9 +5,11 @@ from clf import predict
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title("Emotion Detection App")
-st.write("")
+st.write("This app predicts facial emotions of subjects present in your uploaded image. ")
 
-file_up = st.file_uploader("Upload an image", type="jpg")
+st.write('** **Code:** [Github repository]()']
+
+file_up = st.file_uploader("**Upload an image**", type=["jpg","png"])
 
 if file_up is not None:
     image = Image.open(file_up)
