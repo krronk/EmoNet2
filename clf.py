@@ -3,7 +3,9 @@ import torch
 from PIL import Image
 
 def predict(image_path):
-    resnet = torch.load('mnot_1_68.pth', location = 'cpu')
+    
+    device = torch.device('cpu')
+    resnet = torch.load('mnot_1_68.pth', map_location = device)
 
     #https://pytorch.org/docs/stable/torchvision/models.html
     transform = transforms.Compose([
