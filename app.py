@@ -9,7 +9,7 @@ st.write("This app predicts facial emotions of subjects present in your uploaded
 
 st.write('** Code:** [Github repository](https://github.com/krronk/EmoNet2)')
 
-file_up = st.file_uploader("Upload an image", type=["jpg","png"])
+file_up = st.file_uploader("Upload an image", type="jpg")
 
 if file_up is not None:
     image = Image.open(file_up)
