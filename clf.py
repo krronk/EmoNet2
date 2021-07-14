@@ -24,11 +24,8 @@ def predict(image_path):
     with open('remonet_classes.txt') as f:
         classes = [line.strip() for line in f.readlines()]
 
-    #prob = torch.nn.functional.softmax(out, dim=1)[0] * 100
-    #_, indices = torch.sort(out, descending=True)
-    #return [(classes[idx], prob[idx].item()) for idx in indices[0][:5]]
+    prob = torch.nn.functional.softmax(out, dim=1)[0] * 100
+    _, indices = torch.sort(out, descending=True)
+    return [(classes[idx], prob[idx].item()) for idx in indices[0][:5]]
     
-    top5_prob, top5_catid = torch.topk(probabilities, 5)
-    for i in range(top5_prob.size(0)):
-        
-       print(categories[top5_catid[i]], top5_prob[i].item())
+  
