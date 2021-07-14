@@ -13,9 +13,9 @@ if file_up is not None:
     image = Image.open(file_up)
     st.image(image, caption='Uploaded Image.', use_column_width=True)
     st.write("")
-    st.write("Top Predictions")
+    st.title('**Class predictions:**')
     labels = predict(file_up)
 
     # print out the top 5 prediction labels with scores
     for i in labels:
-        st.write("Prediction (index, name)", i[0], ",   Score: ", i[1])
+        st.write(i[0], ",   Score: ", i[1])
