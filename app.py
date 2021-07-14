@@ -5,7 +5,7 @@ from clf import predict
 st.set_option('deprecation.showfileUploaderEncoding', False)
 
 st.title("Emotion Detection App")
-st.write("This app predicts facial emotions of subjects present in your uploaded image. ")
+st.write("This app predicts facial emotions of subjects present in your uploaded image. The model was trained with the [RAF-DB Dataset](http://www.whdeng.cn/RAF/model1.html). ")
 
 st.write('** Code:** [Github repository](https://github.com/krronk/EmoNet2)')
 
