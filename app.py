@@ -7,9 +7,9 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 st.title("Emotion Detection App")
 st.write("This app predicts facial emotions of subjects present in your uploaded image. ")
 
-st.write('** **Code:** [Github repository](https://github.com/krronk/EmoNet2)')
+st.write('** Code:** [Github repository](https://github.com/krronk/EmoNet2)')
 
-file_up = st.file_uploader("**Upload an image**", type=["jpg","png"])
+file_up = st.file_uploader("Upload an image", type=["jpg","png"])
 
 if file_up is not None:
     image = Image.open(file_up)
